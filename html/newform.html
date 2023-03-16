@@ -8,30 +8,31 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-   <a href="../index.html">REGRESA A LA PAG PPAL</a>
+   <a href="../index.html">REGRESA A LA PAG PRINCIPAL</a>
     <h1>FORMULARIOS - TIPO DE INPUTS</h1>
     <label for="Nombre"></label>
     <label for="Nombre">Nombre: </label>
-    <input type="text" value= "CARLOS MARIO" name="nombre"  id="nombre" class="inputs_class" readonly >
+    <input type="text" value= "CARLOS MARIO" name="nombre"  id="nombre" class="inputs_class" placeholder="Escriba su Nombre" required  >
     <br>
     <label for="file">Escoja el archivo</label>
-    <input type="file" class="inputs_class">
+    <input type="file" class="inputs_class"  >
     <br>
     <label for="contraseña">contraseña: </label>
-    <input type="password" value="contrase" class="inputs_class" disabled>
+    <input type="password" value="contrase" class="inputs_class" placeholder="Escriba su contraseña" required>
     <br>
     <label for="sexo">sexo:  </label>
     Masculino <input type="radio" name="sexo" value="M" id="hombre">
     Femenino <input type="radio" name="sexo" value="F" id="mujer">
+    No especifica <input type="radio" name="sexo" value="F" id="Indefinido">
     <br>
     <label for="calificacion">califique:</label>
     <input type="range"min="0" max="5" step="1" value="0">
     <br>
     <label for="correoelectronico">correo electronico</label>
-    <input type="correo" >
+    <input type="correo" placeholder="Escriba su correo electronico" >
     <br>
     <label for="buscar">search: </label>
-    <input type="url" placeholder="escriba su busqueda" class="inputs_class" >
+    <input type="url" placeholder="escriba su busqueda" class="inputs_class" required>
     <br>
     <label for="telefono">telefono: </label>
     <input type="tel" name="telefono" id="telefono" maxlength="10"minlength="7">
