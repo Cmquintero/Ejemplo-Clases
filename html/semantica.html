@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantica en Html</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Etiquetas Semantica</h1>
+    <h3>Muchas de estas etiquetas sufrieron cambios gracias a la transiccion a el HTML5</h3>
+    <h2>Etiquetas Obsoletas</h2>
+   <p>Estas etiquetas no se utilizan en el nuevo sistema HTML5</p>
+    <table>
+        <thead>
+        <tr>
+        <th>Etiqueta obsoleta</th>
+        <th>Descripción</th>
+        <th>Alternativa</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>&lt;applet&gt;</code></td>
+        <td>Etiqueta para applets Java.</td>
+        <td><code>&lt;embed&gt;</code>, <code>&lt;object&gt;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;acronym&gt;</code></td>
+        <td>Indica un acrónimo.</td>
+        <td><code>&lt;acronym&gt;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;bgsound&gt;</code></td>
+        <td>Especifica un sonido de fondo.</td>
+        <td><code>&lt;audio&gt;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;dir&gt;</code></td>
+        <td>Indica una lista de archivos o carpetas.</td>
+        <td><code>&lt;ul&gt;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;frame&gt;</code></td>
+        <td>Define un marco específico.</td>
+        <td><code>&lt;iframe&gt;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;frameset&gt;</code></td>
+        <td>Define un conjunto de marcos.</td>
+        <td>-</td>
+        </tr>
+        <tr>
+        <td><code>&lt;noframes&gt;</code></td>
+        <td>Indica una alternativa si el navegador no soporta marcos.</td>
+        <td>-</td>
+        </tr>
+        <tr>
+        <td><code>&lt;hgroup&gt;</code></td>
+        <td>Agrupa encabezados.</td>
+        <td><code>&lt;header&gt;</code>, <code>&lt;div&gt;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;isindex&gt;</code></td>
+        <td>Campo para búscar en el documento.</td>
+        <td><code>&lt;input&gt;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;listing&gt;</code>, <code>&lt;xmp&gt;</code></td>
+        <td>Fragmentos de código fuente.</td>
+        <td><code>&lt;pre&gt;&lt;code&gt;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;noembed&gt;</code></td>
+        <td>Alternativa (fallback) para contenidos.</td>
+        <td><code>&lt;object&gt;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;strike&gt;</code></td>
+        <td>Muestra un texto tachado.</td>
+        <td><code>&lt;del&gt;</code>, <code>&lt;s&gt;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;basefont&gt;</code></td>
+        <td>Define una tipografía por defecto.</td>
+        <td><a href="/css/propiedades/fuentes-y-tipografias">CSS: font-family</a></td>
+        </tr>
+        <tr>
+        <td><code>&lt;big&gt;</code></td>
+        <td>Aumenta el tamaño del texto.</td>
+        <td><a href="/css/propiedades/fuentes-y-tipografias">CSS: font-size</a></td>
+        </tr>
+        <tr>
+        <td><code>&lt;blink&gt;</code></td>
+        <td>Muestra el texto de forma parpadeante.</td>
+        <td>-</td>
+        </tr>
+        <tr>
+        <td><code>&lt;center&gt;</code></td>
+        <td>Centra el texto.</td>
+        <td><a href="/css/propiedades/textos-y-alineaciones">CSS: text-align</a></td>
+        </tr>
+        <tr>
+        <td><code>&lt;font&gt;</code></td>
+        <td>Cambia la tipografía o sus características.</td>
+        <td><a href="/css/propiedades/fuentes-y-tipografias">CSS: font-family</a></td>
+        </tr>
+        <tr>
+        <td><code>&lt;marquee&gt;</code></td>
+        <td>Muestra el texto moviéndose de un lado a otro.</td>
+        <td>-</td>
+        </tr>
+        <tr>
+        <td><code>&lt;multicol&gt;</code></td>
+        <td>Columnas múltiples.</td>
+        <td>CSS: columnas</td>
+        </tr>
+        <tr>
+        <td><code>&lt;nobr&gt;</code></td>
+        <td>Evita que un texto haga un salto de línea.</td>
+        <td><a href="/css/propiedades/textos-y-alineaciones">CSS: white-space</a></td>
+        </tr>
+        <tr>
+        <td><code>&lt;spacer&gt;</code></td>
+        <td>Inserta un espacio horizontal.</td>
+        <td><code>&amp;nbsp;</code></td>
+        </tr>
+        <tr>
+        <td><code>&lt;tt&gt;</code></td>
+        <td>Muestra el texto con una fuente monoespaciada.</td>
+        <td><a href="/css/propiedades/fuentes-y-tipografias">CSS: font-family</a></td>
+        </tr>
+        <tr>
+        <td><code>&lt;menu&gt;</code></td>
+        <td>Crea menús de listados.</td>
+        <td><code>&lt;ul&gt;</code></td>
+        </tr>
+        </tbody>
+        </table>
+        <h2>Atributos Obsoletos</h2>
+        <p>En HTML5 tambien existes muchos atributos Obsoletos tales como </p>
+        <table>
+        <thead>
+        <tr>
+        <th>Atributo obsoleto</th>
+        <th>Pertenece a...</th>
+        <th>Descripción</th>
+        <th>Alternativa</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>charset</code></td>
+        <td><code>&lt;a&gt;</code>, <code>&lt;link&gt;</code></td>
+        <td>Codificación del enlace.</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><code>name</code></td>
+        <td><code>&lt;a&gt;</code>, <code>&lt;embed&gt;</code>,<br> <code>&lt;img&gt;</code>, <code>&lt;option&gt;</code></td>
+        <td>Establece un ancla.</td>
+        <td><code>id</code></td>
+        </tr>
+        <tr>
+        <td><code>language</code></td>
+        <td><code>&lt;script&gt;</code></td>
+        <td>Indica el lenguaje utilizado.</td>
+        <td><code>type</code></td>
+        </tr>
+        <tr>
+        <td><code>link</code></td>
+        <td><code>&lt;body&gt;</code></td>
+        <td>Indica el color de los enlaces.</td>
+        <td><a href="/css/selectores/pseudoclases">CSS: :link</a></td>
+        </tr>
+        <tr>
+        <td><code>alink</code></td>
+        <td><code>&lt;body&gt;</code></td>
+        <td>Indica el color de los enlaces.</td>
+        <td><a href="/css/selectores/pseudoclases">CSS: :active</a></td>
+        </tr>
+        <tr>
+        <td><code>vlink</code></td>
+        <td><code>&lt;body&gt;</code></td>
+        <td>Indica el color de los enlaces.</td>
+        <td><a href="/css/selectores/pseudoclases">CSS: :visited</a></td>
+        </tr>
+        <tr>
+        <td><code>bgcolor</code></td>
+        <td><code>&lt;body&gt;</code></td>
+        <td>Indica el color de fondo de página.</td>
+        <td><a href="/css/propiedades/fondos-css">CSS: background-color</a></td>
+        </tr>
+        <tr>
+        <td><code>align</code>, <code>valign</code></td>
+        <td><code>&lt;table&gt;</code></td>
+        <td>Indica la alineación vertical/horizontal.</td>
+        <td><a href="/css/propiedades/textos-y-alineaciones">CSS: alineaciones</a></td>
+        </tr>
+        <tr>
+        <td><code>hspace</code>, <code>vspace</code></td>
+        <td><code>&lt;table&gt;</code>, <code>&lt;iframe&gt;</code></td>
+        <td>Indica espacios en tablas/marcos.</td>
+        <td><a href="/css/propiedades/modelo-de-cajas">CSS: modelo de cajas</a></td>
+        </tr>
+        <tr>
+        <td><code>allowtransparency</code></td>
+        <td><code>&lt;iframe&gt;</code></td>
+        <td>Permite transparencia.</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><code>frameborder</code></td>
+        <td><code>&lt;iframe&gt;</code></td>
+        <td>Indica el borde de los marcos flotantes.</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><code>scrolling</code></td>
+        <td><code>&lt;iframe&gt;</code></td>
+        <td>Permite o no hacer scroll en un marco.</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><code>align</code>, <code>border</code></td>
+        <td><code>&lt;img&gt;</code>, <code>&lt;table&gt;</code></td>
+        <td>Indica que alineación o borde utilizar.</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><code>cellpadding</code></td>
+        <td><code>&lt;table&gt;</code></td>
+        <td>Indica espacios entre celdas de tabla.</td>
+        <td><a href="/css/propiedades/tablas-css">CSS: tablas</a></td>
+        </tr>
+        <tr>
+        <td><code>cellspacing</code></td>
+        <td><code>&lt;table&gt;</code></td>
+        <td>Indica espacios entre celdas de tabla.</td>
+        <td><a href="/css/propiedades/tablas-css">CSS: tablas</a></td>
+        </tr>
+        <tr>
+        <td><code>nowrap</code></td>
+        <td><code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></td>
+        <td>Establece fijo el tamaño de una celda.</td>
+        <td><a href="/css/propiedades/modelo-de-cajas#dimensiones">CSS: tamaños</a></td>
+        </tr>
+        </tbody>
+        </table>
+        <h1>Etiquetas de texto </h1>
+        <h2>fragmeto de texto </h2>
+        <p>En primer lugar, existe una serie de etiquetas HTML simples para seleccionar un fragmento de texto y dotarlo de un significado especial. Por ejemplo</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Etiqueta</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>&lt;strong&gt;</code></td>
+        <td>Fragmento de texto <strong>importante</strong> o <strong>palabras clave</strong>.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;em&gt;</code></td>
+        <td>Fragmento de texto <em>enfatizado</em> respecto a la frase que lo contiene.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;mark&gt;</code></td>
+        <td>Fragmento de texto resaltado, simulando estar <mark>marcado con rotulador amarillo</mark>.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;i&gt;</code></td>
+        <td>Fragmento de texto con voz o tono alternativo al resto.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;b&gt;</code></td>
+        <td>Fragmento de texto sin importancia destacable (<em>fines utilitarios</em>).</td>
+        </tr>
+        <tr>
+        <td><code>&lt;u&gt;</code></td>
+        <td>Fragmento de texto para nombres propios o escritura incorrecta intencionada (<u>sic</u>).</td>
+        </tr>
+        <tr>
+        <td><code>&lt;s&gt;</code></td>
+        <td>Fragmento de texto inexacto o que ya no es relevante. (<s>errores o inexactitudes</s>)</td>
+        </tr>
+        <tr>
+        <td><code>&lt;span&gt;</code></td>
+        <td>Fragmento de texto sin significado (útil para seleccionar).</td>
+        </tr>
+        <tr>
+        <td><code>&lt;cite&gt;</code></td>
+        <td>Fragmento de texto con el título de un trabajo creativo: obras, libros...</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>Ojo, algunas de estas etiquetas, en versiones anteriores de HTML tenían un significado diferente, como por ejemplo la etiqueta "b" </p>
+        <p>que antiguamente simbolizaba un fragmento de texto en negrita o la etiqueta "i", que representaba un fragmento de texto en cursiva</p> 
+        <h2>Modificados de significado</h2>
+        <table>
+        <thead>
+        <tr>
+        <th>Etiqueta</th>
+        <th>Atributos</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>&lt;sup&gt;</code></td>
+        <td></td>
+        <td>Superíndice (24<sup>2</sup>).</td>
+        </tr>
+        <tr>
+        <td><code>&lt;sub&gt;</code></td>
+        <td></td>
+        <td>Subíndice (24<sub>2</sub>).</td>
+        </tr>
+        <tr>
+        <td><code>&lt;small&gt;</code></td>
+        <td></td>
+        <td>Anotaciones menores <small>pequeñas puntualizaciones</small>.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;q&gt;</code></td>
+        <td><code>cite</code></td>
+        <td>Cita o frase extraída de otro contexto.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;dfn&gt;</code></td>
+        <td><code>title</code></td>
+        <td>Definición (término que posteriormente será definido).</td>
+        </tr>
+        <tr>
+        <td><code>&lt;abbr&gt;</code></td>
+        <td><code>title</code></td>
+        <td>Abreviatura o acrónimo.</td>
+        </tr>
+        </tbody>
+        </table>
+        <p>Los saltos de línea son etiquetas especiales de HTML para comenzar en una línea nueva (emular el efecto al pulsar ENTER). 
+        Al contrario que todas las que hemos visto, las etiquetas "br" son etiquetas que no necesitan etiqueta de cierre, por lo que sólo se escribe la etiqueta de apertur</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Etiqueta</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>&lt;br&gt;</code></td>
+        <td>Salto de línea (<em>nueva línea</em>).</td>
+        </tr>
+        <tr>
+        <td><code>&lt;wbr&gt;</code></td>
+        <td>Oportunidad de salto de línea (<em>división silábica con guión</em>).</td>
+        </tr>
+        </tbody>
+        </table>
+       <h2>Aspectos informaticos</h2>  
+       <p>Existen una serie de etiquetas HTML ligeramente orientadas a 
+        aspectos informáticos como combinaciones de teclado del usuario o para representar variables matemáticas o informáticas:</p>
+        <table>
+        <thead>
+        <tr>
+        <th>Etiqueta</th>
+        <th>Atributos</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>&lt;kbd&gt;</code></td>
+        <td></td>
+        <td>Entrada de información del usuario (<em>generalmente, combinación de teclado</em>).</td>
+        </tr>
+        <tr>
+        <td><code>&lt;samp&gt;</code></td>
+        <td></td>
+        <td>Salida de información de un programa informático.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;var&gt;</code></td>
+        <td></td>
+        <td>Variable (contexto matemático o informático).</td>
+        </tr>
+        <tr>
+        <td><code>&lt;time&gt;</code></td>
+        <td><code>datetime</code></td>
+        <td>Indica una fecha/hora legible para humanos, con formato para máquinas opcional.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;data&gt;</code></td>
+        <td><code>value</code></td>
+        <td>Información equivalente orientado a máquinas.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;code&gt;</code></td>
+        <td></td>
+        <td>Fragmento de código fuente (<em>en línea</em>).</td>
+        </tr>
+        </tbody>
+        </table>          
+<  h2> Etiquetas de edicion</h2>
+<p>Por último, tenemos unas etiquetas orientadas a la edición posterior a la publicación de un texto o página web</p>
+<table>
+    <thead>
+    <tr>
+    <th>Etiqueta</th>
+    <th>Atributos</th>
+    <th>Descripción</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><code>&lt;ins&gt;</code></td>
+    <td><code>cite</code>, <code>datetime</code></td>
+    <td>Fragmento de texto o información <strong>añadida</strong> a posteriori de la publicación inicial.</td>
+    </tr>
+    <tr>
+    <td><code>&lt;del&gt;</code></td>
+    <td><code>cite</code>, <code>datetime</code></td>
+    <td>Fragmento de texto o información <strong>eliminada</strong> a posteriori de la publicación inicial.</td>
+    </tr>
+    </tbody>
+    </table>
+    <H1>Agrupaciones</H1>
+ <p>Las siguientes etiquetas se utilizan para agrupar información, como es el caso de las etiquetas "div" o "p" que vimos en el ejemplo mostrado anteriormente:</p>
+ <table>
+    <thead>
+    <tr>
+    <th>Etiqueta</th>
+    <th>Atributos</th>
+    <th>Descripción</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td><code>&lt;div&gt;</code></td>
+    <td></td>
+    <td>Capa o división utilizado para agrupar varias etiquetas HTML.</td>
+    </tr>
+    <tr>
+    <td><code>&lt;p&gt;</code></td>
+    <td></td>
+    <td>Define un párrafo de texto (<em>con sus etiquetas HTML para texto</em>).</td>
+    </tr>
+    <tr>
+    <td><code>&lt;pre&gt;</code></td>
+    <td></td>
+    <td>Establece un texto preformateado (<em>respetando espacios y saltos de línea</em>).</td>
+    </tr>
+    <tr>
+    <td><code>&lt;blockquote&gt;</code></td>
+    <td><code>cite</code></td>
+    <td>Agrupa información y características de una cita (<em>autor, fuente, etc...</em>).</td>
+    </tr>
+    <tr>
+    <td><code>&lt;main&gt;</code></td>
+    <td></td>
+    <td>Contenedor para englobar la parte principal de la página.</td>
+    </tr>
+    <tr>
+    <td><code>&lt;hr&gt;</code></td>
+    <td></td>
+    <td>Indica una separación temática del texto.</td>
+    </tr>
+    </tbody>
+    </table>
+    <h2>listas</h2>
+    <p>En HTML podemos crear listas de información de una forma muy sencilla. Empecemos por las etiquetas disponibles</p>
+    <table>
+        <thead>
+        <tr>
+        <th>Etiqueta</th>
+        <th>Atributos</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>&lt;ul&gt;</code></td>
+        <td></td>
+        <td>Define una lista sin orden. Se trata de la etiqueta contenedora.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;ol&gt;</code></td>
+        <td><code>start</code>, <code>reversed</code>, <code>type</code></td>
+        <td>Define una lista numerada (con orden). Etiqueta contenedora.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;li&gt;</code></td>
+        <td><code>value</code></td>
+        <td>Define un ítem de la lista.</td>
+        </tr>
+        </tbody>
+        </table>
+        <h1>Hipervinculos</h1>
+        <p>"a" es una etiqueta importante Esta etiqueta se utiliza para crear los llamados enlaces, vínculos o hipervínculos. La idea es establecer una referencia a una dirección o URL donde está alojado ese otro documento de destino, que puede ser una página web, un archivo PDF, una imagen o cualquier otro tipo de documento</p>
+        <table>
+         <thead>
+            <tr>
+            <th>Etiqueta</th>
+            <th>Descripción</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><code>&lt;a&gt;</code></td>
+            <td>Etiqueta para hacer referencia a otras páginas web o recursos como documentos o archivos.</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>Esta etiqueta debe tener, como mínimo, el atributo href, ya que es el atributo con el que se especifica la dirección URL al documento que se quiere enlazar</p>
+            <table>
+                <thead>
+                <tr>
+                <th>Atributo</th>
+                <th>Valor</th>
+                <th>Descripción</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td><code>href</code></td>
+                <td><em>URL</em></td>
+                <td>Enlace al documento que se quiere cargar. <strong>Atributo obligatorio</strong>.</td>
+                </tr>
+                <tr>
+                <td><code>download</code></td>
+                <td><em>nombre.ext</em></td>
+                <td>Descarga el enlace (href) en lugar de abrirlo. Si se indica valor, se renombra.</td>
+                </tr>
+                <tr>
+                <td><code>target</code></td>
+                <td><code>_blank</code></td>
+                <td>Abre el enlace en una nueva pestaña.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>_self</code></td>
+                <td>Abre el enlace en la pestaña o <code>&lt;iframe&gt;</code> actual.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>_parent</code></td>
+                <td>Abre el enlace en el documento padre.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>_top</code></td>
+                <td>Abre el enlace en el documento raíz (padre global).</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><em>nombre</em></td>
+                <td>Abre el enlace en el <code>&lt;iframe&gt;</code> con el nombre especificado.</td>
+                </tr>
+                <tr>
+                <td><code>rel</code></td>
+                <td><code>alternate</code></td>
+                <td>Indica que el enlace es una versión alternativa (idioma o formato diferente).</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>author</code></td>
+                <td>Indica que el enlace es la web del autor de la página actual.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>bookmark</code></td>
+                <td>El enlace es un <a href="https://es.wikipedia.org/wiki/Permalink">permalink</a> a la sección de la página actual.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>help</code></td>
+                <td>Indica que el enlace ofrece ayuda para la página actual.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>license</code></td>
+                <td>Indica que la página actual está cubierta por la licencia referenciada.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>prev</code></td>
+                <td>Indica que el enlace es la parte previa del documento actual.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>next</code></td>
+                <td>Indica que el enlace es la parte siguiente del documento actual.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>nofollow</code></td>
+                <td>Indica que el enlace no está supervisado por el autor del sitio web.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>noreferrer</code></td>
+                <td>El navegador no envía la página de procedencia al visitar el enlace.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>prefetch</code></td>
+                <td>El navegador precarga el enlace (es probable que se haga clic)</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>search</code></td>
+                <td>Indica que el enlace es una página para realizar búsquedas.</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td><code>tag</code></td>
+            <td>Asocia una etiqueta al enlace especificado, en relación al documento actual.</td>
+            </tr>
+           <tr>
+           <td><code>hreflang</code></td>
+           <td><em>Idioma</em></td>
+           <td><a href="https://es.wikipedia.org/wiki/ISO_639-1">Código ISO 639-1</a> del idioma del documento.</td>
+           </tr>
+           <tr>
+           <td><code>type</code></td>
+           <td><em>Tipo</em></td>
+           <td><a href="https://en.wikipedia.org/wiki/Media_type">Tipo de contenido MIME</a> al que se enlaza. Atributo no obligatorio.</td>
+           </tr>
+           </tbody>
+           </table>
+    <h1>Tablas basica</h1>
+    <p>Una tabla puede ser sencilla o compleja, dependiendo de nuestro objetivo y la cantidad de etiquetas o atributos a utilizar. Así pues, veamos primero las etiquetas básicas para crear una tabla de la forma más sencilla posible</p>
+    <table>
+        <thead>
+        <tr>
+        <th>Etiqueta</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>&lt;table&gt;</code></td>
+        <td>Etiqueta contenedora que tendrá en su interior toda la tabla.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;tr&gt;</code></td>
+        <td><strong>Table Row</strong>. Etiqueta contenedora de cada fila de la tabla.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;td&gt;</code></td>
+        <td><strong>Table Data</strong>. Cada una de las celdas de la tabla.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;th&gt;</code></td>
+        <td><strong>Table Header</strong>. Cada una de las celdas de cabecera de la tabla.</td>
+        </tr>
+        </tbody>
+        </table>
+     <h2>Combinar celdas</h2>   
+     <p>Cada etiqueta "td" y "th" puede incluir una serie de atributos para modificar su comportamiento o para establecer relaciones semánticas entre celdas. Probablemente, las más interesantes sean colspan y rowspan:</p>
+     <table>
+        <thead>
+        <tr>
+        <th>Atributo</th>
+        <th>Valor</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>colspan</code></td>
+        <td><em>número</em></td>
+        <td>Número de columnas que la celda abarcará.</td>
+        </tr>
+        <tr>
+        <td><code>rowspan</code></td>
+        <td><em>número</em></td>
+        <td>Número de filas que la celda abarcará.</td>
+        </tr>
+        <tr>
+        <td><code>headers</code></td>
+        <td><em>ids</em></td>
+        <td>Id de los elementos <code>&lt;th&gt;</code> con los que tiene relación la celda.</td>
+        </tr>
+        <tr>
+        <td><code>scope</code> (solo <code>&lt;th&gt;</code>)</td>
+        <td>row</td>
+        <td>La cabecera se aplica a alguna de las filas adyacentes.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>col</td>
+        <td>La cabecera se aplica a alguna de las columnas adyacentes.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>rowgroup</td>
+        <td>La cabecera se aplica a todas las celdas restantes de la fila.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>colgroup</td>
+        <td>La cabecera se aplica a todas las celdas restantes de la columna.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><strong>auto</strong></td>
+        <td>La cabecera se aplica a las celdas de forma automática.</td>
+        </tr>
+        <tr>
+        <td><code>abbr</code> (solo <code>&lt;th&gt;</code>)</td>
+        <td><em>nombre</em></td>
+        <td>Abreviatura o información alternativa sobre la cabecera.</td>
+        </tr>
+        </tbody>
+        </table>
+       <h2>Organizacion de tablas</h2> 
+       <p>Por defecto, al crear una tabla, el navegador se encarga de crearla a medida que va leyendo las etiquetas, por lo que la tabla se crea en el orden que se han especificado sus elementos, de arriba a abajo. Sin embargo, podemos utilizar una serie de etiquetas contenedoras que establecerán la zona de la tabla donde deben aparecer su contenido:</p>
+       <table>
+        <thead>
+        <tr>
+        <th>Etiqueta</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>&lt;thead&gt;</code></td>
+        <td>Etiqueta contenedora de la cabecera de la tabla. Parte superior de la tabla.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;tbody&gt;</code></td>
+        <td>Etiqueta contenedora del cuerpo de la tabla. Parte central de la tabla.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;tfoot&gt;</code></td>
+        <td>Etiqueta contenedora del pie de la tabla. Parte inferior de la tabla.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;caption&gt;</code></td>
+        <td>Establece un título de la tabla, independientemente de su posición.</td>
+        </tr>
+        </tbody>
+        </table>   
+ </body>
+</html>
