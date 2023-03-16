@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+</head>
+<body>
+    <h1>Tipos de etiquetas Multimedia</h1>
+    <h3>img</h3>
+    <img src="../img/Ejemplo _de _imagenes 2.png" alt="Ejemplo de imagenenesen etiqueta html" width="1130" height="472">
+    <p>Tambien existen otro tipo de eriquetas para imagenes</p>
+    <table>
+        <thead>
+            <tr>
+            <th>Formato</th>
+            <th>Características</th>
+            <th>¿Recomendado?</th>
+            </tr>
+            </thead>
+           <tr>
+            <td><a href="http://www.libpng.org/pub/png/">PNG</a></td>
+            <td> Soporta transparencia. Compresión sin pérdidas. Imágenes «lisas».</td>
+            <td> Sí</td>
+            </tr>
+            <tr>
+           <tr>
+           <td><a href="https://jpeg.org/jpeg/">JPG</a></td>
+           <td>Compresión con pérdidas. Ideal para imágenes con texturas.</td>
+           <td>Sí</td>
+           </tr>
+           <tr>
+            <td><a href="https://www.w3.org/TR/SVG/">SVG</a></td>
+            <td>Formato vectorial. Ideal para imágenes escalables.</td>
+            <td>Sí</td>
+            </tr>
+            <tr>
+            <td><a href="https://www.w3.org/Graphics/GIF/spec-gif89a.txt">GIF</a></td>
+            <td>Formato para imágenes pequeñas y animadas.</td>
+            <td>Intentar evitar.</td>
+            </tr>
+            <tr>
+            <td><a href="https://developers.google.com/speed/webp/">WEBP</a></td>
+            <td>Alternativa libre de Google al JPEG. Soporta transparencias.</td>
+            <td>Sí, <a href="http://caniuse.com/webp">con precaución</a></td>
+            </tr>
+            <tr>
+            <td><a href="https://jpeg.org/jpeg2000/">JPEG2000</a></td>
+            <td>Evolución del JPEG.</td>
+           <td>No, <a href="http://caniuse.com/jpeg2000">solo Safari</a></td>
+           </tr>
+           <tr>
+          <td><a href="https://jpeg.org/jpegxr/">JPEG-XR</a></td>
+          <td>Alternativa libre de Microsoft al JPEG.</td>
+          <td>No, <a href="https://caniuse.com/jpegxr">solo IE</a></td>
+          </tr>
+          <tr>
+            <td><a href="https://aomediacodec.github.io/av1-avif/">AVIF</a></td>
+            <td>Formato de imagen basado en AV1. No confundir con videos AVI.</td>
+            <td>Aún no, <a href="https://caniuse.com/avif">poco soporte</a></td>
+            </tr>
+    </table>
+    <H2>Contenido Externo</H2>
+    <table>
+        <thead>
+        <tr>
+        <th>Etiqueta</th>
+        <th>Atributos</th>
+        <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><code>&lt;iframe&gt;</code></td>
+        <td><code>src</code>, <code>srcdoc</code>, <code>name</code>, <code>width</code>, <code>height</code></td>
+        <td>Permite incrustar contenido externo en «vivo».</td>
+        </tr>
+        <tr>
+        <td><code>&lt;embed&gt;</code></td>
+        <td><code>src</code>, <code>type</code>, <code>width</code>, <code>height</code></td>
+        <td>Permite incrustar contenido interactivo.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;object&gt;</code></td>
+        <td><code>data</code>, <code>type</code>, <code>name</code>, <code>form</code>, <code>width</code>, <code>height</code></td>
+        <td>Permite incrustar contenido externo con fallbacks.</td>
+        </tr>
+        <tr>
+        <td><code>&lt;param&gt;</code></td>
+        <td><code>name</code>, <code>value</code></td>
+        <td>Define parámetros de un elemento <code>&lt;object&gt;</code>.</td>
+        </tr>
+        </tbody>
+        </table>
+    
+    <h2>Tipo de archivos de videos</h2>
+    <table>
+        <thead>
+        <tr>
+        <th>Formato</th>
+        <th>Codec utilizado</th>
+        <th>Características</th>
+        <th>¿Recomendado?</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td><a href="https://mpeg.chiariglione.org/standards/mpeg-4/mpeg-4.htm">MP4</a></td>
+        <td><a href="https://www.videolan.org/developers/x264.html">x264</a>, <a href="https://www.divx.com/en/software/technologies/h264/">DivX H264</a></td>
+        <td>Alta calidad. Codec x264 libre.</td>
+        <td>Sí, <a href="https://caniuse.com/#feat=mpeg4">buen soporte</a></td>
+        </tr>
+        <tr>
+        <td><a href="https://www.webmproject.org/">WebM</a></td>
+        <td>VP8, VP9</td>
+        <td>Alternativa libre a MP4 de Google.</td>
+        <td>Sí, <a href="https://caniuse.com/#feat=webm">soporte medio</a></td>
+        </tr>
+        <tr>
+        <td><a href="https://aomedia.org/">AV1</a></td>
+        <td>Basado en VP10, Daala y Thor</td>
+        <td>Compite con HEVC/H.265</td>
+        <td>No, <a href="https://caniuse.com/#feat=av1">soporte bajo</a></td>
+        </tr>
+        <tr>
+        <td>HEVC</td>
+        <td><a href="http://x265.org/">x265</a>, <a href="https://www.divx.com/en/software/technologies/hevc/">DivX HEVC</a></td>
+        <td>Futura evolución de MP4.</td>
+        <td>No, <a href="https://caniuse.com/#feat=hevc">poco soporte</a></td>
+        </tr>
+        <tr>
+        <td><a href="https://caniuse.com/#feat=ogv">OGV</a></td>
+        <td><a href="https://www.theora.org/">Theora</a></td>
+        <td>Alternativa libre a MP4.</td>
+        <td><a href="https://caniuse.com/#feat=ogv">Con precaución</a></td>
+        </tr>
+        <tr>
+        <td>MKV</td>
+        <td><a href="https://www.matroska.org/">Matroska</a></td>
+        <td>Buena compresión. Potente.</td>
+        <td>No, alto consumo CPU</td>
+        </tr>
+        <tr>
+        <td>AVI</td>
+        <td><a href="https://www.xvid.com/">XviD</a>, <a href="https://www.divx.com/">DivX 3/5</a></td>
+        <td>Menor compresión que MP4.</td>
+        <td>No, anticuado</td>
+        </tr>
+        </tbody>
+        </table>
+    <p></p>
+    <p>Ejemplo de un video con audio con el comando controls, para que el usuario reproduzca cuando le plasca</p>
+        <video src="../Video/_GOL DE MESSI A BAYER EN HD CON RELATO ÉPICO_.mp4" poster="presentacion.jpg" controls></video>
+        <H2>tipo de archivos de audio</H2>
+        <table>
+            <thead>
+            <tr>
+            <th>Atributo</th>
+            <th>Valor</th>
+            <th>Descripción</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><code>src</code></td>
+            <td><em>Dirección URL</em></td>
+            <td>Audio a reproducir. Obligatoria si actua como etiqueta contenedora.</td>
+            </tr>
+            <tr>
+            <td><code>preload</code></td>
+            <td><strong>auto</strong> | <code>metadata</code> | <code>none</code></td>
+            <td>Indica como realizar la precarga del audio.</td>
+            </tr>
+            <tr>
+            <td><code>mediagroup</code></td>
+            <td><em>nombre</em></td>
+            <td>Establece un nombre para un grupo de contenidos multimedia.</td>
+            </tr>
+            <tr>
+            <td><code>autoplay</code></td>
+            <td><badge-type class="boolean"></badge-type><em>boolean</em></td>
+            <td>Comienza a reproducir el audio automáticamente.</td>
+            </tr>
+            <tr>
+            <td><code>loop</code></td>
+            <td><badge-type class="boolean"></badge-type><em>boolean</em></td>
+            <td>Vuelve a iniciar el audio cuando finaliza su reproducción (bucle).</td>
+            </tr>
+            <tr>
+            <td><code>muted</code></td>
+            <td><badge-type class="boolean"></badge-type><em>boolean</em></td>
+            <td>Establece el audio sin sonido (silenciado).</td>
+            </tr>
+            <tr>
+            <td><code>controls</code></td>
+            <td><badge-type class="boolean"></badge-type><em>boolean</em></td>
+            <td>Muestra los controles de reproducción. Por defecto no se muestran.</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>Un ejemplo de un fotmato de audio, el audio de el video anterior  con el comando controls</p>
+            <audio src="../audio/y2mate.com - GOL DE MESSI A BAYER EN HD CON RELATO ÉPICO.mp3" preload="none" controls></audio>
+            <h2>Etiquetas para los subtitulos</h2>
+            <p>Este formato se puede utilizar mediante la etiqueta "track" dentro de una etiqueta contenedora "video" y 
+            después de las etiquetas "source". La etiqueta "track" soporta varios atributos: </p>
+            <table>
+                <thead>
+                <tr>
+                <th>Atributo</th>
+                <th>Valor</th>
+                <th>Descripción</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td><code>src</code></td>
+                <td><em>Dirección URL</em></td>
+                <td>Archivo o ruta del archivo de subtítulos WebVTT. <strong>Atributo obligatorio</strong>.</td>
+                </tr>
+                <tr>
+                <td><code>srclang</code></td>
+                <td><em>idioma</em></td>
+                <td>Código ISO 639-1 del idioma de los subtítulos.</td>
+                </tr>
+                <tr>
+                <td><code>label</code></td>
+                <td><em>nombre</em></td>
+                <td>Título que verá el usuario para elegir el canal de subtítulos.</td>
+                </tr>
+                <tr>
+                <td><code>kind</code></td>
+                <td><strong>subtitles</strong> | <code>captions</code> <br> <code>descriptions</code> <br> <code>chapters</code> | <code>metadata</code></td>
+                <td>Indica el tipo o género de subtítulos enlazados.</td>
+                </tr>
+                <tr>
+                <td><code>default</code></td>
+                <td><badge-type class="boolean"></badge-type><em>boolean</em></td>
+                <td>Utiliza este canal de subtítulos por defecto.</td>
+                </tr>
+                </tbody>
+                </table>
+</body>
+</html>
