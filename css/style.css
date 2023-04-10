@@ -1,57 +1,200 @@
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-.contenedor{
-    width: 90%;
-    max-width: 1500px;
-    margin: auto;
+h1 {
+    font-size: 50px;
 }
-nav{
+
+.contenedor {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+}
+
+nav {
     width: 100%;
     height: 80px;
-    background-color: #fff;
+    background: #fff;
     border-bottom: 1px solid transparent;
-    box-shadow: 1px 1px 10px 0 blue;
+    box-shadow: 1px 1px 10px 0 rgba(18, 12, 68, 0.2);
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 100;
 }
-.nav{
+
+.nav {
     display: flex;
-    justify-content: space-between;
     height: 80px;
     width: 100%;
     align-items: center;
-    padding: 0 40px;
 }
-.nav .logo{
-    height: 80px;
 
+.enlaces-header {
+    font-weight: 300;
+    margin: auto;
 }
-.nav .logo img{ 
-    height: 80px;
-}
-.nav .enlaces_header a{
-    color:black;
-    text-decoration:none;
+
+.nav .enlaces-header a {
+    color: #5d6678;
+    text-decoration: none;
     margin-left: 20px;
-
+    padding: 12px;
+    border-radius: 10px;
 }
-.contenido_header{
-    width: 100%;
+
+.nav .enlaces-header a:hover {
+    color: #fff;
+    background-color: #d03d3d;
+    border-color: #d03d3d;
+    transition: all ease-in-out .5s;
+}
+
+.titulospro {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.contenido-header {
+    width: 80%;
     height: 600px;
-    display:flex ;
-    justify-content: center;
-    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
 }
-#Foto_perfil {
-    height: 300px;
-    width: 300px;
 
+.contenido-header > img {
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+    animation: ease-in animacion 0.5s;
+}
+
+.textos-header {
+    margin: 0 0 0 30px;
+}
+
+.contenido-header P {
+    font-weight: 300;
+    margin-top: 14px;
+    color: #5d6678;
+    text-align: justify;
+}
+
+@keyframes animacion {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+.contenido-header a {
+    margin: 28px 0 0 0;
+    width: 150px;
+    display: inline-block;
+    background-color: #d03d3d;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 0;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
+}
+
+/********************footer****************/
+
+footer{
+    background-color: rgb(70,70,70);
+    padding: 20px 0;
+    padding-top: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.partFooter {
+    width: 22%;
+    text-align: center;
+}
+
+.partFooter img {
+    width: 60%;
+}
+
+.partFooter h4{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    background-color: #d03d3d;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #d03d3d;
+}
+
+.contact{
+    margin: 10px;
+    display: block;
+    text-align: left;
+    color: #fff;
+}
+
+.contact>i{
+    float: left;
+    margin-right: 10px;
+}
+.contact >p{
+    font-weight: 500;
+}
+.partFooter > a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+}
+.partFooter> a:hover {
+    background-color: #d03d3d;
+    transition: all ease-in-out .8s;
+}
+
+
+.social-media >a >i {
+    color: #fff;
+    display: inline-block;
+    font-size: 25px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out .3;
+    margin-right: 8px;
+    margin-top: 20px;
+}
+
+.social-media >a>i :hover{
+    background-color: #d03d3d;
 }
