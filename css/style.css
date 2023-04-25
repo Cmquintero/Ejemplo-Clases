@@ -5,24 +5,24 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+    
 }
-
-h1 {
-    font-size: 50px;
-}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
 
 .contenedor {
-    width: 90%;
-    max-width: 1400px;
+    width: 110%;
+    max-width: 1500px;
     margin: auto;
-    overflow: hidden;
-}
-
-header::before {
-    content: "";
-    display: block;
-    margin-bottom: 80px;
 }
 
 nav {
@@ -30,7 +30,7 @@ nav {
     height: 80px;
     background: #fff;
     border-bottom: 1px solid transparent;
-    box-shadow: 1px 1px 10px 0 rgba(18, 12, 68, 0.2);
+    box-shadow: 1px 1px 13px 0 #cfcc08;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -38,93 +38,130 @@ nav {
 
 .nav {
     display: flex;
-    height: 80px;
+    justify-content: space-between;
+    height: 100px;
     width: 100%;
     align-items: center;
+    padding: 0 40px;    
 }
 
-.enlaces-header {
-    font-weight: 300;
-    margin: auto;
+.nav .logo {
+    height: 90px;
 }
 
-.nav .enlaces-header a {
-    color: #5d6678;
+.nav .logo img {
+    height: 80px;
+}
+
+.nav .enlaces_header a {
+    color: black;
     text-decoration: none;
-    margin-left: 20px;
-    padding: 12px;
-    border-radius: 10px;
+    margin-left: 40px;
+}
+.enlaces_header a:hover {
+    color: #cfcc08;
 }
 
-.nav .enlaces-header a:hover {
-    color: #fff;
-    background-color: #d03d3d;
-    border-color: #d03d3d;
-    transition: all ease-in-out .5s;
+#foto_perfil {
+    margin-top: 100px;
+    height: 620px;
+    width: 1500px;
 }
 
-.titulospro {
-    text-align: left;
-    margin: 20px 0;
+h2 {
+    font-size: 35px;
 }
 
-.contenido-header {
-    width: 80%;
-    height: 600px;
+#whatsapp img{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 80%;
+    cursor: pointer;
+    font-family: Arial,Helvetica,sans-serif;
+    z-index: 999;
+    width: 60px;
+}
+
+.container-related-products h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    color: #cfcc08;
+}
+
+.card-list-products{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.price {
+    color: #000;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.card-img{
+    background: transparent;
+    margin-bottom: 30px;
+}
+
+.card-img img {
+    height: 200px;
+    object-fit:cover;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.info-card {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
 }
 
-.contenido-header > img {
-    width: 300px;
-    height: 300px;
-    margin-left: 50px;
-    animation: ease-in animacion 0.5s;
-}
-
-.textos-header {
-    margin: 0 0 0 30px;
-}
-
-.contenido-header P {
+.text-product{
+    color:#252525;
     font-weight: 300;
-    margin-top: 14px;
-    color: #5d6678;
-    text-align: justify;
+    line-height: 1.4;
 }
 
-@keyframes animacion {
-    0% { transform: scale(0); }
-    100% { transform: scale(1); }
-}
-
-.contenido-header a {
-    margin: 28px 0 0 0;
-    width: 150px;
-    display: inline-block;
-    background-color: #d03d3d;
+.text-product h2{
     text-align: center;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 0;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 16px;
-    text-transform: uppercase;
-    box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
+    text-size-adjust: 25px;
+}
+.text-product h3 {
+    color: inherit;
+    font-weight: inherit;
+    font-size: 15px;
+    text-align: center;
 }
 
-/********************footer****************/
+.text-product h3:hover{
+    color: #cfcc08;
+}
 
-footer{
-    background-color: rgb(70,70,70);
+.text-product p{
+    color: #666;
+    font-size: 13px;
+    text-align: center;
+    text
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+
+.text-product p:hover{
+    color: #000000;
+}
+
+footer {
+    background: #e6e4e4;
     padding: 20px 0;
     padding-top: 30px;
     overflow: hidden;
-    display: flex;
+    display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: auto;
@@ -136,65 +173,98 @@ footer{
 }
 
 .partFooter img {
-    width: 60%;
+    width: 100%;
 }
 
-.partFooter h4{
-    color: #fff;
+.partFooter h4 {
+    
+    color: black;
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 15px;
-    background-color: #d03d3d;
+    background-color: #cfcc08;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #d03d3d;
+    border: 1px solid double #cfcc08;
 }
 
-.contact{
+.contact {
     margin: 10px;
     display: block;
-    text-align: left;
-    color: #fff;
+    text-align:left;
+    color: black;
 }
 
-.contact>i{
+.contact > i {
     float: left;
     margin-right: 10px;
 }
-.contact >p{
+
+.contact > p {
     font-weight: 500;
 }
-.partFooter > a{
-    color: white;
+
+.partFooter > a {
+    color: black;
     display: block;
     text-decoration: none;
     margin-bottom: 10px;
     font-weight: 500;
     padding: 5px;
     border-radius: 5px;
-}
-.partFooter> a:hover {
-    background-color: #d03d3d;
-    transition: all ease-in-out .8s;
+
 }
 
+.partFooter > a:hover {
+    background-color: #cfcc08b6;
+    transition: all ease-in-out .11s;
 
-.social-media >a >i {
-    color: #fff;
-    display: inline-block;
+}
+
+.social-media > a > i {
+    color: black;
+    display:inline-block;
     font-size: 25px;
-    border: 1px solid #fff;
+    border: 2px solid black;
     border-radius: 50%;
     width: 38px;
     height: 38px;
     line-height: 36px;
     text-align: center;
     cursor: pointer;
-    transition: all ease-in-out .3;
+    transition: all ease-in-out .8s;
     margin-right: 8px;
-    margin-top: 20px;
 }
 
-.social-media >a>i :hover{
-    background-color: #d03d3d;
+.social-media > a > i:hover {
+    background-color: #cfcc08;
 }
+
+.partFooter img {
+    width: 40%;
+}
+.enlaces_header > a  {
+    color: black;
+    display:inline-block;
+    font-size: 25px;
+    border: 1px solid black;
+    width: 200px;
+    height: 38px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out .8s;
+    margin-right: 8px;
+
+}
+ul {
+    text-size-adjust: 10px;
+    text-align: center;
+    list-style: disc; 
+    margin: 1px 0; 
+    padding: 0 0 0 2px; 
+  }
+  
+  li {
+    margin: 0.5px 0; 
+  }
