@@ -95,6 +95,7 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin-bottom: 40px;
+    
 }
 
 .price {
@@ -103,8 +104,13 @@ h2 {
 
 .card {
     cursor: pointer;
+    transition : transform .50s ease-in-out;
 }
+    
 
+.card:hover{
+transform: scale(1.1);
+}
 .card-img{
     background: transparent;
     margin-bottom: 30px;
@@ -268,3 +274,11 @@ ul {
   li {
     margin: 0.5px 0; 
   }
+  .logo
+  {
+    transition: transform  .50s ease-in-out;
+        }
+        .logo:hover {
+  transform: scale(1.1);
+  }
+  
