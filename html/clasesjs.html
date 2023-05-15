@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cambiar_fondo {
+            background-color: beige;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid saddlebrown;
+            text-transform:  uppercase;
+
+        }
+        #cambiar_fondo:hover{ 
+            background-color: aquamarine;
+            transition: all ease-in 0.9s;
+            box-shadow: 0 0 10px gray;
+        }
+    </style>
+</head>
+<body id="contenedor">
+    
+<h1>Carlos Mario</h1>
+<input type="text" id="variable">
+<button onclick ="funcion()" id="evento">calcular</button>
+<h1 id="titulo"></h1>
+<span id="cambiar_fondo">cambiar_fondo</span>
+    <!-- archivo java script-->
+<script>
+//variable 
+const nameuno="cualquier cosa texto, num, obj"
+var name_dos="cualquier cosa texto, num, obj"
+let nametres="cualquier cosa texto, num, obj"
+//alert(nameuno);
+console.log(name_dos)
+console.log(nametres);
+//TIPOS DE DATOS 
+let num_a = 5;//numero entero 
+let num_b = 10.2; //numero desimal
+let boolean = false; //or true
+let stringvar = "hola soy string";
+let arraynum = [ 1,2,3,4,5,"6","7","8" ];
+let dias_semana = ["lunes", "martes","miercoles","jueves","viernes","sabado","domingo"];
+let users = [
+ {name: "Carlos ", last_name: "Mario", age:20},
+ {name: "Quintero ", last_name: "Trigos", age:20},
+ {name: "Yesly ", last_name: "Quintero", age:20}
+]
+//operaciones matematicas: + - * / % ^
+let sum = num_a + num_b;
+let resta = num_b - num_a;
+let multi= num_b * num_a;
+let divi = num_b / num_a;
+let module = num_b % num_a;
+let expo = num_a ^ num_b;
+resta = Math.round(resta);
+console.log ("suma:" + sum + "\nresta: "+ resta + "\nmulti" + multi) ;
+let contactenar = "suma:".concat(sum);
+console.log(contactenar);
+//Operadores de comparacion : < / > / <> / >= / <= / = / == / ===
+//operadores logicos: ternario / and && / oR || /negacion diferente o contario  !
+let varboo = true;
+console.log (!varboo);
+//estructuras repetitivas ; IF/ ELSE /ELSEIF 
+//ESTRUCTURAS CICLICAS : FOR /WHILE/ DO WHILE 
+if(varboo){ 
+    console.log(arraynum);
+    console.log(arraynum.length);
+    console.log(users[0].name);
+}
+else{
+    console.log("no ingresa");
+    
+}
+for(let i=0; i<dias_semana.length;i++) {
+    console.log(dias_semana[i]);
+}
+let varname = 0 ;
+while (varname<users.length) {
+    console.log(users[varname].name);
+    varname++;
+}
+//funciones y eventos 
+function funcion(){
+    let variable = document.getElementById('variable').value;
+    variable = variable.toUpperCase();
+    document.getElementById("titulo").innerText= variable;
+    document.getElementById('titulo').style.color="#00ffff"
+    console.log(variable);
+}
+document.getElementById("evento").addEventListener("click", function(){ 
+    let variable = document.getElementById('variable').value;
+    document.getElementById('variable').style.background="red"
+    console.log(variable);
+})
+
+document.getElementById("cambiar_fondo").addEventListener("dblclick", function(){
+    document.getElementById('contenedor').style.background = "yellow"
+})
+</script>
+</body>
+</html>
