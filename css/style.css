@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -12,7 +12,7 @@ h1 {
     font-size: 50px;
 }
 
-.contenedor{
+.contenedor {
     width: 90%;
     max-width: 1400px;
     margin: auto;
@@ -25,22 +25,22 @@ header::before {
     margin-bottom: 80px;
 }
 
-nav{
+nav {
     width: 100%;
     height: 80px;
-    background: #fff;
+    background: rgb(120, 60, 60);
     border-bottom: 1px solid transparent;
-    box-shadow: 3px 1px 10px 0 rgba(0,0,0,.2);
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2);
     position: fixed;
     top: 0;
     z-index: 100;
 }
 
-.nav{
+.nav {
     display: flex;
     height: 80px;
     width: 100%;
-    align-items:center;
+    align-items: center;
 }
 
 .enlaces-header {
@@ -48,31 +48,22 @@ nav{
     margin: auto;
 }
 
-.nav .logo{
-    height: 80px;
-}
-
-.nav .logo img{
-    height: 100%;
-}
-
-.nav .enlaces-header a{
-    color: #5d6678;
+.nav .enlaces-header a {
+    color: #ffffff;
     text-decoration: none;
     margin-left: 20px;
     padding: 12px;
     border-radius: 10px;
 }
 
-
 .nav .enlaces-header a:hover {
-    color: #fff;
+    color: #ffffff;
     background-color: #d03d3d;
     border-color: #d03d3d;
     transition: all ease-in-out .5s;
 }
 
-.hamburguer{
+.sorieketon{
     width: 80px;
     height: 80px;
     text-align: center;
@@ -82,7 +73,7 @@ nav{
     display: none;
 }
 
-.hamburguer>i{
+.sorieketon>i{
     font-size: 25px;
     line-height: 80px;
 }
@@ -92,7 +83,7 @@ nav{
     margin: 20px 0;
 }
 
-.contenido-header{
+.contenido-header {
     width: 80%;
     height: 600px;
     display: flex;
@@ -101,7 +92,6 @@ nav{
     text-align: center;
     margin: 0 auto;
 }
-
 
 .contenido-header > img {
     width: 300px;
@@ -121,12 +111,10 @@ nav{
     text-align: justify;
 }
 
-
 @keyframes animacion {
     0% { transform: scale(0); }
     100% { transform: scale(1); }
 }
-
 
 .contenido-header a {
     margin: 28px 0 0 0;
@@ -144,16 +132,65 @@ nav{
     box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
 }
 
-
-#foto_perfil{
-    height: 300px;
-    width: 300px;
+/* ############################ EDUCATION ############################ */
+.section-education{
+    background-color: #dbdbdb;
 }
 
+.section-education .title {
+    display: block;
+    margin: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
 
-Footer{
-    background: rgb(70,70,70);
-    padding: 20px 0;
+.content-education{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+.education{
+    width: 45%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.education i {
+    border: 2px solid #d03d3d;
+    border-radius: 50%;
+    background-color: #d03d3d;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 36px;
+}
+
+.education a{
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.education:hover{
+    background-color: #d03d3d;
+    box-shadow: 0 0 8px gray;
+    transition: all ease-in-out .4s;
+    color: #fff;
+}
+
+.education a:hover{
+    color: #fff;
+}
+
+/* ############################ FOOTER ############################ */
+footer {
+    background: rgb(120, 60, 60);
+    padding: 20px 0; /*50 0 20 0*/
     padding-top: 30px;
     overflow: hidden;
     display: flex;
@@ -162,43 +199,50 @@ Footer{
     margin: auto;
 }
 
-.partFooter{
+.partFooter {
     width: 22%;
     text-align: center;
 }
 
-.partFooter img{
-    width: 60%;
+.partFooter img {
+    width: 40%;
+    display: inline-flex;
+    
+    transition: transform 0.3s ease-in-out;
+}
+            
+        .partFooter img:hover {
+  transform: scale(1.1);
 }
 
-.partFooter h4{
+.partFooter h4 {
     color: white;
     font-size: 20px;
     font-weight: 400;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     background-color: #d03d3d;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid  black ;
+    border: 1px double  #d03d3d;
 }
 
-.contact{
+.contact {
     margin: 10px;
     display: block;
     text-align: left;
     color: #fff;
 }
 
-.contact > i{
+.contact > i {
     float: left;
     margin-right: 10px;
 }
 
-.contact > p{
+.contact > p {
     font-weight: 500;
 }
 
-.partFooter > a{
+.partFooter > a {
     color: #fff;
     display: block;
     text-decoration: none;
@@ -208,21 +252,20 @@ Footer{
     border-radius: 5px;
 }
 
-.partFooter > a:hover{
+.partFooter > a:hover {
     background-color: #d03d3d;
-    transition: all ease-in-out .0s;
+    transition: all ease-in-out .6s;
 }
 
-
-.social-media > a > i{
+.social-media > a > i {
     color: #fff;
     display: inline-block;
     font-size: 25px;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 50%;
     width: 38px;
     height: 38px;
-    line-height: 38px;
+    line-height: 36px;
     text-align: center;
     cursor: pointer;
     transition: all ease-in-out .3s;
@@ -230,15 +273,19 @@ Footer{
     margin-top: 20px;
 }
 
+.social-media > a > i:hover{
+    background-color: #d03d3d;
+}
 
 .social-media > a > i:hover{
     background-color: #d03d3d;
 }
 
 
-@media screen and (max-width:70px) {
-    .hamburguer{
-    display: block;
+/* ############################ MEDIA QUERY ############################ */
+@media screen and (max-width:700px){
+    .sorieketon{
+        display: block;
     }
 
     .enlaces-header{
@@ -250,26 +297,39 @@ Footer{
         height: 100vh;
         display: flex;
         flex-direction: column;
-       align-items: ;
+        align-items: center;
         clip-path: circle(0.0% at 0 0);
     }
 
-    .nav .enlaces-header{
+    .nav .enlaces-header a{
         color: #fff;
-        background-color: #fff;
+        background-color: #f38d8d;
         text-transform: uppercase;
-        font-weight: 800px;
+        font-weight: 800;
         margin-top: 20px;
         width: 50%;
         text-align: center;
     }
 
-    .nav .enlaces-header:hover{
+    .nav .enlaces-header a:hover{
         color: #d03d3d;
         background-color: #fff;
     }
 
-    .nav .hamburgueropen{
-        clip-path: circle(0.0% at 0 0);
+    .nav .sorieketonopen{
+        clip-path: circle(150.0% at 0 0);
+       color: #ffffff;
     }
+
+}
+
+.fotito {
+    display: flex;
+    display: inline-flex;
+    padding: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+    
+.fotito:hover {
+transform: scale(1.5);
 }
