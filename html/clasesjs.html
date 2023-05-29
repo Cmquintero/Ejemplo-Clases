@@ -1,54 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ClasesJS</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0LH6Z3t8-FFeoPQrn7fbSfRjJqDPpClLjc3ShyR__MvYTqVezHXORwtoZYA5IuKdkUPA&usqp=CAU" alt="">
     <style>
+      body {
+            text-align: center;
+            .
+        }
+
+        #contenedor {
+            display: block;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
         #cambiar_fondo {
             background-color: beige;
             padding: 10px;
             border-radius: 5px;
             border: 2px solid saddlebrown;
-            text-transform:  uppercase;
-
+            text-transform: uppercase;
         }
-        #cambiar_fondo:hover{ 
+
+        #cambiar_fondo:hover {
             background-color: aquamarine;
             transition: all ease-in 0.9s;
             box-shadow: 0 0 10px gray;
+        
+        }
+        #shi{
+            justify-content: center;
         }
     </style>
 </head>
 <body id="contenedor">
-    
 <h1>Carlos Mario</h1>
 <input type="text" id="variable">
-<button onclick ="funcion()" id="evento">calcular</button>
+<button onclick ="funcion()" id="evento">LAUNCH</button>
 <h1 id="titulo"></h1>
-<span id="cambiar_fondo">cambiar_fondo</span>
+<span id="cambiar_fondo">Backgroundmodify</span>
+<h3>con la siguiente funcion puedes cambiar el color de la caja de texto usando enter</h3>
+<input type="text" id="myInput">
+
     <!-- archivo java script-->
 <script>
-//variable 
+let edad = 30;
+console.log(edad);
+if (true) {
+  let edad = 40; // Nuevo ámbito de bloque
+  console.log(edad); // Salida: 40
+}
+
+console.log(edad); // Salida: 35
+
+//variable
 const nameuno="cualquier cosa texto, num, obj"
 var name_dos="cualquier cosa texto, num, obj"
 let nametres="cualquier cosa texto, num, obj"
 //alert(nameuno);
-console.log(name_dos)
+console.log(name_dos);
+console.log(nameuno);
 console.log(nametres);
-//TIPOS DE DATOS 
-let num_a = 5;//numero entero 
+//TIPOS DE DATOS
+
+let num_a = 5;//numero entero
 let num_b = 10.2; //numero desimal
 let boolean = false; //or true
 let stringvar = "hola soy string";
 let arraynum = [ 1,2,3,4,5,"6","7","8" ];
 let dias_semana = ["lunes", "martes","miercoles","jueves","viernes","sabado","domingo"];
 let users = [
- {name: "Carlos ", last_name: "Mario", age:20},
- {name: "Quintero ", last_name: "Trigos", age:20},
- {name: "Yesly ", last_name: "Quintero", age:20}
+{name: "Carlos ", last_name: "Mario", age:20},
+{name: "Quintero ", last_name: "Trigos", age:20},
+{name: "Yesly ", last_name: "Quintero", age:20}
 ]
 //operaciones matematicas: + - * / % ^
 let sum = num_a + num_b;
@@ -65,16 +93,19 @@ console.log(contactenar);
 //operadores logicos: ternario / and && / oR || /negacion diferente o contario  !
 let varboo = true;
 console.log (!varboo);
+// document.whrite
+document.write('<div id ="shi">papa que perico?</div>');
+//
+
 //estructuras repetitivas ; IF/ ELSE /ELSEIF 
 //ESTRUCTURAS CICLICAS : FOR /WHILE/ DO WHILE 
-if(varboo){ 
+if(contactenar){ 
     console.log(arraynum);
     console.log(arraynum.length);
     console.log(users[0].name);
 }
 else{
     console.log("no ingresa");
-    
 }
 for(let i=0; i<dias_semana.length;i++) {
     console.log(dias_semana[i]);
@@ -100,7 +131,22 @@ document.getElementById("evento").addEventListener("click", function(){
 
 document.getElementById("cambiar_fondo").addEventListener("dblclick", function(){
     document.getElementById('contenedor').style.background = "yellow"
+
 })
+
+document.getElementById("myInput").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    let myInput = document.getElementById("myInput").value;
+    myInput=myInput.toUpperCase();
+    document.getElementById("myInput").style.background = "blue";
+    document.getElementById("titulo").innerText= myInput  ;
+    document.getElementById('titulo').style.color = "Yellow";
+
+    // Aquí puedes llamar a la función que deseas ejecutar al presionar Enter
+    console.log("Se presionó Enter");
+  }
+});
+
 </script>
 </body>
 </html>
