@@ -1,58 +1,65 @@
-<P>punto numero 1</P>
-
+<p>punto numero 1</p>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+      alt=""
+    />
     <title>correcion del parcial</title>
     <style>
-        body {
-            background-color: slategray;
-          font-family: Arial, sans-serif;
-        }
-        .container {
-          width: 300px;
-          margin: 0 auto;
-        }
-        h1 {
-          text-align: center;
-          color: rgb(184, 184, 26);
-        }
-        .ingreselas {
-          width: 100%;
-          padding: 5px;
-          box-sizing: border-box;
-          text-align: center;
-        }
-        .result {
-          display: flex;
-          justify-content: center;
-        }
-        .button {
-          display: block;
-          width: 100%;
-          padding: 10px;
-          margin-top: 20px;
-          background-color: #4caf50;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-        .logro {
-          background-color: #dff2bf;
-        }
-        
+      body {
+        background-color: slategray;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 300px;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(184, 184, 26);
+      }
+      .ingreselas {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .result {
+        display: flex;
+        justify-content: center;
+      }
+      .button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .logro {
+        background-color: #dff2bf;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
       <h1>Calculadora de números</h1>
-      <input type="text" id="num" class="ingreselas" placeholder="Ingresa los números" />
+      <input
+        type="text"
+        id="num"
+        class="ingreselas"
+        placeholder="Ingresa los números"
+      />
       <button id="botoncal" class="button">Calcular</button>
       <label class="result" id="numero_ingresado"></label>
       <label class="result" id="contador"></label>
@@ -63,187 +70,211 @@
       <label class="result success" id="logro"></label>
     </div>
     <script>
-        let numbers = [];
-        let count = 0;
-        let sum = 0;
-        let product = 1;
+      let numbers = [];
+      let count = 0;
+      let sum = 0;
+      let product = 1;
 
-        function actualizar() {
-          const inputValue = num.value;
-          numero_ingresado.textContent = `Número ingresado: ${numbers}`;
-          contador.textContent = `Cantidad de números: ${count}`;
-          suma.textContent = `Suma: ${sum}`;
-          resta.textContent = `Resta: ${numbers[0] - sum}`;
-          multiplicacion.textContent = `Multiplicación: ${product}`;
-          promedio.textContent = `Promedio: ${sum / count}`;
+      function actualizar() {
+        const inputValue = num.value;
+        numero_ingresado.textContent = `Número ingresado: ${numbers}`;
+        contador.textContent = `Cantidad de números: ${count}`;
+        suma.textContent = `Suma: ${sum}`;
+        let restaAcumulada = numbers[0];
+
+        for (let i = 1; i < numbers.length; i++) {
+          restaAcumulada -= numbers[i];
         }
 
-        function calculate() {
-          const inputValue = num.value;
+        resta.textContent = `Resta: ${restaAcumulada}`;
 
-          if (
-            isNaN(inputValue) ||
-            inputValue.trim() === "" || 
-            Number(inputValue) === 0
-          ) {
-            alert("Ingresa un número válido.");
-            return;
-          }
+        multiplicacion.textContent = `Multiplicación: ${product}`;
+        promedio.textContent = `Promedio: ${sum / count}`;
+      }
 
-          const number = Number(inputValue);
+      function calculate() {
+        const inputValue = num.value;
 
-          numbers.push(number);
-          count++;
-          sum += number;
-          product *= number;
-
-          if (count === 10) {
-            logro.textContent = "¡Felicidades! Has ingresado 10 números.";
-            logro.style.display = "block";
-            document.body.style.backgroundColor = "#DFF2BF";
-          } else {
-            logro.style.display = "none";
-            document.body.style.backgroundColor = "white";
-          }
-
-          num.value = "";
-          num.focus();
-
-          actualizar(); 
+        if (
+          isNaN(inputValue) ||
+          inputValue.trim() === "" ||
+          Number(inputValue) === 0
+        ) {
+          alert("Ingresa un número válido.");
+          return;
         }
-        
-        
-        botoncal.addEventListener("click", calculate);
+
+        const number = Number(inputValue);
+
+        numbers.push(number);
+        count++;
+        sum += number;
+        product *= number;
+
+        if (count === 10) {
+          logro.textContent = "¡Felicidades! Has ingresado 10 números.";
+          logro.style.display = "block";
+          document.body.style.backgroundColor = "#DFF2BF";
+        } else {
+          logro.style.display = "none";
+          document.body.style.backgroundColor = "white";
+        }
+
+        num.value = "";
+        num.focus();
+
+        actualizar();
+      }
+
+      botoncal.addEventListener("click", calculate);
     </script>
-</body>
+  </body>
 </html>
-
 
 <p>punto numero 2</p>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de Rangos</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 300px;
-            margin: 0 auto;
-        }
-        h1 {
-            text-align: center;
-            color: rgb(184, 184, 26);
-        }
-        .caja {
-            width: 100%;
-            padding: 5px;
-            box-sizing: border-box;
-            text-align: center;
-        }
-        .button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin-top: 20px;
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .result {
-            margin-top: 10px;
-            padding: 5px;
-            font-weight: bold;
-        }
-        .range {
-            background-color: #dff2bf;
-        }
-        .even {
-            background-color: #bfefff;
-        }
-        .odd {
-            background-color: #ffcaca;
-        }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 300px;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(184, 184, 26);
+      }
+      .caja {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      .button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .result {
+        margin-top: 10px;
+        padding: 5px;
+        font-weight: bold;
+      }
+      .range {
+        background-color: #dff2bf;
+      }
+      .even {
+        background-color: #bfefff;
+      }
+      .odd {
+        background-color: #ffcaca;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Calculadora de Rangos</h1>
-        <input type="text" id="numMenor" class="caja" placeholder="Ingrese el número menor" />
-        <input type="text" id="numMayor" class="caja" placeholder="Ingrese el número mayor" />
-        <button id="calcular" class="button">Calcular</button>
-        <div class="result " id="rango"></div>
-        <div class="result" id="impr"></div>
-        <div class="result" id="par"></div>
+      <h1>Calculadora de Rangos</h1>
+      <input
+        type="text"
+        id="numMenor"
+        class="caja"
+        placeholder="Ingrese el número menor"
+      />
+      <input
+        type="text"
+        id="numMayor"
+        class="caja"
+        placeholder="Ingrese el número mayor"
+      />
+      <button id="calcular" class="button">Calcular</button>
+      <div class="result" id="rango"></div>
+      <div class="result" id="impr"></div>
+      <div class="result" id="par"></div>
     </div>
 
     <script>
-        const calcular = document.getElementById('calcular');
+      const calcular = document.getElementById("calcular");
 
-        calcular.addEventListener('click', function () {
-            const numMenor = Number(document.getElementById('numMenor').value);
-            const numMayor = Number(document.getElementById('numMayor').value);
+      calcular.addEventListener("click", function () {
+        const numMenor = Number(document.getElementById("numMenor").value);
+        const numMayor = Number(document.getElementById("numMayor").value);
 
-            if (isNaN(numMenor) || isNaN(numMayor)) {
-                alert('Ingrese números válidos en ambos campos.');
-                return;
-            }
-
-            if (numMenor >= numMayor) {
-                alert('estas mandando mal los numeros');
-                return;
-            }
-
-            if (numMayor - numMenor > 20) {
-                alert('La diferencia entre los números es mayor a 20. No es un rango válido.');
-                return;
-            }         
-            rango.textContent = `Números comprendidos entre ${numMenor} y ${numMayor}: ${getRangeNumbers(numMenor, numMayor)}`;
-            par.textContent = `Números pares: ${getEvenNumbers(numMenor, numMayor)}`;
-            impr.textContent = `Números impares: ${getOddNumbers(numMenor, numMayor)}`;
-
-            document.getElementById('numMenor').value = '';
-            document.getElementById('numMayor').value = '';
-
-            document.getElementById('numMenor').focus();
-        });
-
-        function getRangeNumbers(min, max) {
-            let numbers = '';
-            for (let i = min; i <= max; i++) {
-                numbers += i + ' ';
-            }
-            return numbers;
+        if (isNaN(numMenor) || isNaN(numMayor)) {
+          alert("Ingrese números válidos en ambos campos.");
+          return;
         }
 
-        function getEvenNumbers(min, max) {
-            let numbers = '';
-            for (let i = min; i <= max; i++) {
-                if (i % 2 === 0) {
-                    numbers += i + ' ';
-                }
-            }
-            return numbers;
+        if (numMenor >= numMayor) {
+          alert("estas mandando mal los numeros");
+          return;
         }
 
-        function getOddNumbers(min, max) {
-            let numbers = '';
-            for (let i = min; i <= max; i++) {
-                if (i % 2 !== 0) {
-                    numbers += i + ' ';
-                }
-            }
-            return numbers;
+        if (numMayor - numMenor > 20) {
+          alert(
+            "La diferencia entre los números es mayor a 20. No es un rango válido."
+          );
+          return;
         }
+        rango.textContent = `Números comprendidos entre ${numMenor} y ${numMayor}: ${getRangeNumbers(
+          numMenor,
+          numMayor
+        )}`;
+        par.textContent = `Números pares: ${getEvenNumbers(
+          numMenor,
+          numMayor
+        )}`;
+        impr.textContent = `Números impares: ${getOddNumbers(
+          numMenor,
+          numMayor
+        )}`;
+
+        document.getElementById("numMenor").value = "";
+        document.getElementById("numMayor").value = "";
+
+        document.getElementById("numMenor").focus();
+      });
+
+      function getRangeNumbers(min, max) {
+        let numbers = "";
+        for (let i = min; i <= max; i++) {
+          numbers += i + " ";
+        }
+        return numbers;
+      }
+
+      function getEvenNumbers(min, max) {
+        let numbers = "";
+        for (let i = min; i <= max; i++) {
+          if (i % 2 === 0) {
+            numbers += i + " ";
+          }
+        }
+        return numbers;
+      }
+
+      function getOddNumbers(min, max) {
+        let numbers = "";
+        for (let i = min; i <= max; i++) {
+          if (i % 2 !== 0) {
+            numbers += i + " ";
+          }
+        }
+        return numbers;
+      }
     </script>
-</body>
+  </body>
 </html>
