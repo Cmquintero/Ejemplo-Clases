@@ -5,52 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
 </head>
 <body>
     <form action="" method="post" id="form" autocomplete="off">
         <div class="form">
             <h1>REGISTRO</h1>
             <div class="grupo">
-            <label for="">Name:</label>
-            <input type="text" id="name">
-        </div>
-        <div class="form">
-            
+                <label for="">Name: </label>
+                <input type="text" id="name">
+            </div>
             <div class="grupo">
-            <label for="">Email</label>
-            <input type="email" id="Email">
-        </div>
-        <div class="form">
-            
+                <label for="">Email: </label>
+                <input type="email" id="email">
+            </div>
             <div class="grupo">
-            <label for="">password</label>
-            <input type="password" id="password">
-        </div>
-        <button type="submit">REGISTRO</button>
-        <p class="info" id="info"></p>
-        </div>
+                <label for="">Password: </label>
+                <input type="password" id="password">
+            </div>
 
+            <button type="submit">REGISTRAR</button>
+            <p class="info" id="info"></p>
+        </div>
     </form>
     <script>
-        const form = document.getElementById("form");
-        const name = document.getElementById("name");
-        const email= document.getElementById("email");
-        const password = document.getElementById("password");
-        const espacioinfo = document.getElementById("info");
-        form.addEventListener("submit",evento => {
+        const form          = document.getElementById("form");
+        const name          = document.getElementById("name");
+        const email         = document.getElementById("email");
+        const password      = document.getElementById("password");
+        const espacioinfo   = document.getElementById("info");
+        form.addEventListener("submit", evento=>{
             evento.preventDefault();
-            let val_email =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if (name.value.length <3 ){
-                console.log("el nombre es mayor a 2")
+            let val_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            let verificar = false;
+            let info = "";
+            if(name.value.length < 3){
+                info += "El nombre debe ser mayor a 2<br>";
+                verificar = true;
             }
-            console.log(val_email.test(email.value))
-            if(val_email.test(email.value)){
-                console.log("email.invalido")
+            if(!val_email.test(email.value)){
+                info += "Email inválido<br>";
+                verificar = true;
             }
-if(password.value.length <8 ){
-    console.log("Debil papa asi no sirve ")
-}
+            if(password.value.length < 8){
+                info += "Password corto y debil<br>";
+                verificar = true;
+            }
+            if(verificar){
+                espacioinfo.innerHTML = info;
+                espacioinfo.style.color = "red"
+            }else{
+                espacioinfo.innerText = "Enviado con éxito";
+                espacioinfo.style.color = "green"
+            }
+
         });
     </script>
 </body>
