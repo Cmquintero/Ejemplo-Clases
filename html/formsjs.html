@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form action="" method="post" id="form" autocomplete="off">
+        <div class="form">
+            <h1>REGISTRO</h1>
+            <div class="grupo">
+            <label for="">Name:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form">
+            
+            <div class="grupo">
+            <label for="">Email</label>
+            <input type="email" id="Email">
+        </div>
+        <div class="form">
+            
+            <div class="grupo">
+            <label for="">password</label>
+            <input type="password" id="password">
+        </div>
+        <button type="submit">REGISTRO</button>
+        <p class="info" id="info"></p>
+        </div>
+
+    </form>
+    <script>
+        const form = document.getElementById("form");
+        const name = document.getElementById("name");
+        const email= document.getElementById("email");
+        const password = document.getElementById("password");
+        const espacioinfo = document.getElementById("info");
+        form.addEventListener("submit",evento => {
+            evento.preventDefault();
+            let val_email =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (name.value.length <3 ){
+                console.log("el nombre es mayor a 2")
+            }
+            console.log(val_email.test(email.value))
+            if(val_email.test(email.value)){
+                console.log("email.invalido")
+            }
+if(password.value.length <8 ){
+    console.log("Debil papa asi no sirve ")
+}
+        });
+    </script>
+</body>
+</html>
